@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>:: mail page ::</title>
+</head>
+<body>
+    <center>
+        <form action="{% url 'mail' %}" method="POST">
+            {% csrf_token %}
+            <h1>mail verification</h1>
+            <input type="text" name="mail" placeholder="enter mail"><br><br>
+            <input type="textarea" name="msg" placeholder="enter your msg"><br><br>
+            <input type="submit" value="SEND">
+        </form>
+    </center>
+</body>
+</html>
